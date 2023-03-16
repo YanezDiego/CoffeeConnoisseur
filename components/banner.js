@@ -1,4 +1,4 @@
-const Banner = () => {
+const Banner = (props) => {
     return (
       <div className={styles.container}>
         <h1 className={styles.title}>
@@ -6,7 +6,9 @@ const Banner = () => {
           <span className={styles.title2}>Connoisseur</span>
         </h1>
         <p className={styles.subTitle}>Find new Coffee Shops near by</p>
-        <button className={styles.button}>View Stores</button>
+        <button className={styles.button} onClick={props.onBtnClick}>
+          {props.buttonText}
+        </button>
       </div>
     );
 }
